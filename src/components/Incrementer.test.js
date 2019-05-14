@@ -8,6 +8,11 @@ describe('Incrementer component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  
+  it('increments counter on button press', () => {
+    const wrapper = shallow(<Incrementer />);
+
+    wrapper.find('button').at(0).simulate('click');
+    expect(wrapper.state('count')).toEqual(1);
+  });
 
 });
