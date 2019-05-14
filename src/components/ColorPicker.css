@@ -1,0 +1,19 @@
+.ColorPicker {
+  button {
+    border-radius: 20%;
+  }
+  .red {
+    background-color: red;
+    color: white;
+  }
+  .yellow {
+    background-color: yellow;
+    color: black;
+  }
+  .blue {
+    background-color: blue;
+    color: white;
+  }
+
+
+}
