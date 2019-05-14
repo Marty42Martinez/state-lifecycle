@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ColorPicker from './ColorPicker';
+import { doesNotReject } from 'assert';
 
 describe('ColorPicker component', () => {
   it('renders a ColorPicker', () => {
@@ -29,4 +30,12 @@ describe('ColorPicker component', () => {
     expect(wrapper.state('color')).toEqual('blue');
   });
 
+  it('changes div className based on button press', done => {
+    const wrapper = shallow(<ColorPicker />);
+
+    wrapper.setState({ color: 'red' }, () => {
+      expect(wrapper.find('div').at(0).hasClass('red')).toBeTruthy();
+      done();
+    });
+  });
 });
