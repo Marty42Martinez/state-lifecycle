@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import Styles
+import styles from './ColorPicker.css';
 
 function ColorPicker({ selectColorHandler }) {
   return (
-    <section>
-      <button onClick={() => selectColorHandler('red')}>Red</button>
-      <button onClick={selectColorHandler.bind(null, 'yellow')}>Yellow</button>
-      <button onClick={() => selectColorHandler('blue')}>Blue</button>
+    <section className={styles.ColorPicker}>
+      <button className={styles.red} onClick={() => selectColorHandler('red')}>Red</button>
+      <button className={styles.yellow} onClick={selectColorHandler.bind(null, 'yellow')}>Yellow</button>
+      <button className={styles.blue} onClick={() => selectColorHandler('blue')}>Blue</button>
     </section>
   );
 }
