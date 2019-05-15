@@ -8,5 +8,13 @@ describe('App component', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+  
+  it('changes color on a selectColor event', () => {
+    const wrapper = shallow(<App />);
+
+    wrapper.instance().selectColor('purple');
+
+    expect(wrapper.state('color')).toEqual('purple');
+  });
 
 });
