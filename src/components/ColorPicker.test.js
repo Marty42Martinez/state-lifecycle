@@ -25,4 +25,12 @@ describe('Color Picker component', () => {
     expect(selectColorHandler).toHaveBeenCalledWith('yellow');
   });
 
+  it('selects blue on button click', () => {
+    const selectColorHandler = jest.fn();
+    const wrapper = shallow(<ColorPicker selectColorHandler={selectColorHandler} />);
+
+    wrapper.find('button').at(2).simulate('click');
+    expect(selectColorHandler).toHaveBeenCalledWith('blue');
+  });
+
 });
