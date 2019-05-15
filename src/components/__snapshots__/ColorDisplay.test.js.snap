@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Color Display component creates an instance of ColorDisplay 1`] = `
+<div
+  className="ColorDisplay"
+  style={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+/>
+`;
